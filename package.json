@@ -14,7 +14,6 @@
     "build": "babel src -d dist --copy-files --delete-dir-on-start",
     "clean": "node -e 'require(\"rimraf\")(\"./dist\", () => {})'",
     "start": "node dist/main.js",
-    "test": "mocha --recursive \"./test/*.js\"",
     "test": "jest ./test/*.js",
     "dev": "telepresence intercept api-gateway -n sproud-stage --port 50051 -- nodemon --exec babel-node src/main.js",
     "precommit": "lint-staged"
